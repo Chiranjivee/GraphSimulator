@@ -44,6 +44,8 @@ public class BFSTraverser implements GraphTraverser
 				}
 			}
 		}
+
+		printer.appendNullAtPrinterEnd();
 	}
 
 	@Override

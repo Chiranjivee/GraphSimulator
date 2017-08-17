@@ -26,7 +26,6 @@ public class GraphPrinter
 
 	public void printGraph()
 	{
-		this.appendNullAtPrinterEnd();
 		System.out.println(printer);
 	}
 	
