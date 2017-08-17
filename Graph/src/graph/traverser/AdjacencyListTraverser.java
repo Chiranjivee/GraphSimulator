@@ -34,6 +34,8 @@ public class AdjacencyListTraverser implements GraphTraverser
 			{
 				printer.appendNodeData(neighbour.getNodeData());
 			}
+
+			printer.appendNullAtPrinterEnd();
 		}
 	}
 
