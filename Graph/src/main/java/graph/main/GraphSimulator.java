@@ -1,3 +1,5 @@
+package graph.main;
+
 import graph.entity.Graph;
 import graph.entity.GraphEdge;
 import graph.entity.GraphNode;
