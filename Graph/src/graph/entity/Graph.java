@@ -1,9 +1,5 @@
 package graph.entity;
 
-import graph.entity.GraphEdge;
-import graph.entity.GraphNode;
-import graph.traverser.GraphTraverser;
-
 import java.util.ArrayList;
 import java.util.List;
 

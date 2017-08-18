@@ -38,7 +38,8 @@ public class TraversalHelper
 			neighbourNode.setVisited(true);
 
 			// Add the neighbour to the queue.
-			visitedNeighboursQueue.add(neighbourNode);
+			//visitedNeighboursQueue.add(neighbourNode);
+//			visitedNeighboursQueue.add(0, neighbourNode);
 		}
 	}
 }

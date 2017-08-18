@@ -4,6 +4,7 @@ import graph.entity.GraphNode;
 import graph.printer.GraphPrinter;
 import graph.traverser.AdjacencyListTraverser;
 import graph.traverser.BFSTraverser;
+import graph.traverser.DFSTraverser;
 import graph.traverser.GenericGraphTraverser;
 
 public class GraphSimulator
@@ -37,9 +38,9 @@ public class GraphSimulator
 		// Create an edge between nodes.
 		GraphEdge edgeOne = new GraphEdge(nodeOne, nodeTwo);
 		GraphEdge edgeTwo = new GraphEdge(nodeOne, nodeThree);
-		GraphEdge edgeThree = new GraphEdge(nodeTwo, nodeThree);
-		GraphEdge edgeFour = new GraphEdge(nodeOne, nodeSix);
-		GraphEdge edgeFive = new GraphEdge(nodeTwo, nodeOne);
+		GraphEdge edgeThree = new GraphEdge(nodeTwo, nodeFour);
+		GraphEdge edgeFour = new GraphEdge(nodeTwo, nodeFive);
+		GraphEdge edgeFive = new GraphEdge(nodeThree, nodeSix);
 
 		// Add edges to the graph
 		graph.addEdge(edgeOne);
@@ -55,6 +56,11 @@ public class GraphSimulator
 			new AdjacencyListTraverser(graphPrinter));
 
 		// Display the adjacency List representation of graph
+		graphTraverser.traverseGraphAndPrint();
+		
+		graphTraverser.setTraverser(
+			new DFSTraverser(graphPrinter));
+		
 		graphTraverser.traverseGraphAndPrint();
 	}
 }

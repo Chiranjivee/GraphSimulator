@@ -8,19 +8,19 @@ import graph.printer.GraphPrinter;
 import java.util.LinkedList;
 import java.util.List;
 
-public class BFSTraverser implements GraphTraverser
+public class DFSTraverser implements GraphTraverser
 {
 	private TraversalHelper traversalHelper;
 	private GraphPrinter printer;
 
-	public BFSTraverser(GraphPrinter printer)
+	public DFSTraverser(GraphPrinter printer)
 	{
 		this.traversalHelper = new TraversalHelper();
 		this.printer = printer;
 	}
-	
+
 	@Override
-	public void 
+	public void
 		traverse(
 			Graph graph)
 	{
@@ -53,7 +53,7 @@ public class BFSTraverser implements GraphTraverser
 						}
 					}
 
-					visitedNodesQueue.addAll(unvisitedNeighbours);
+					visitedNodesQueue.addAll(0, unvisitedNeighbours);
 				}
 			}
 		}
@@ -64,6 +64,6 @@ public class BFSTraverser implements GraphTraverser
 	@Override
 	public String getTraverserInitMessage()
 	{
-		return "Printing BFS for graph:";
+		return "Printing DFS for graph:";
 	}
 }
